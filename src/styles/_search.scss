@@ -1,0 +1,33 @@
+.metro-transit {
+  &--routes {
+    margin: 15px auto;
+    position: relative;
+    width: 100%;
+
+    &_search {
+      border: thin solid var(--metro-dark-gray);
+      color: var(--metro-black);
+      font-size: 21px;;
+      padding: 10px 10px;
+      position: relative;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        font-size: 24px;;
+        padding: 20px 20px;
+      }
+    }
+    
+    &_searchButton {
+      border: thin solid red;
+      background: 0;
+      border: 0;
+      cursor: pointer;
+      padding: 10px 10px;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  } 
+}

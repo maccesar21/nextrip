@@ -1,0 +1,129 @@
+.metro {
+  &-transit {
+    &--departures {
+      border: thin solid var(--metro-gray);
+      margin: 20px auto;
+      width: 95vw;
+
+      @keyframes blink {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      @media (min-width: 768px) {
+        margin: 50px auto;
+        width: 90vw;
+      }
+
+      @media (min-width: 1024px) {
+        margin: 60px auto;
+        width: 75vw;
+      }
+
+      &_broadcast {
+        animation: blink 1s infinite;
+        right: 90px;
+        position: absolute;
+        top: 20px;
+
+        @media (min-width: 768px) {
+          right: 100px;
+          top: 25px;
+        }
+
+        @media (min-width: 1440px) {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      &_heading {
+        background: var(--metro-gray);
+        color: var(--metro-black);
+        display: flex;
+        font-size: 16px;
+        padding: 20px 10px;
+
+        @media (min-width: 768px) {
+          font-size: 28px;
+          padding: 20px 20px;
+        }
+      }
+
+      &_stop, &_stopNum {
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+        width: 70%;
+
+        @media (min-width: 768px) {
+          width: 80%;
+        }
+      }
+
+      &_stopNum {
+        font-size: 12px;
+        text-align: right;
+        padding-top: 5px;
+        width: 30%;
+
+        @media (min-width: 768px) {
+          font-size: 18px;
+          padding-top: 10px;
+          width: 20%;
+        }
+      }
+      
+      &_header {
+        background: var(--metro-yellow);
+        color: var(--metro-black);
+        display: flex;
+        font-weight: 600;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+      }
+      
+      &_item {
+        font-size: 16px;
+        padding: 15px 10px;
+        position: relative;
+
+        @media (min-width: 768px) {
+          font-size: 18px;
+          padding: 20px 20px;
+        }
+
+        &:nth-child(1) {
+          font-weight: 600;
+          width: 25%;
+        }
+        
+        &:nth-child(2) {
+          width: 50%;
+        }
+        
+        &:nth-child(3) {
+          font-weight: 600;
+          text-align: right;
+          width: 25%;
+        }
+      }
+
+      &_information {
+        background: var(--metro-light-gray);
+        border-bottom: thin solid var(--metro-dark-gray);
+        color: var(--metro-black);
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        .metro-transit--departures_item {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

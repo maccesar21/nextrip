@@ -1,0 +1,30 @@
+.metro {
+  &-transit {
+    &--banner {
+      background: url('https://www.metrotransit.org/img/nextrip.jpg') top center no-repeat;
+      background-size: cover;
+      height: 320px;
+      position: relative;
+      width: 100vw;
+
+      &_title {
+        background: rgba(255, 255, 255, .70);
+        bottom: 25px;
+        text-align: center;
+        left: 25px;
+        padding: 20px 25px;
+        position: absolute;
+      }
+
+      &_titleText {
+        color: #8a8b8a;
+        font-size: 42px;
+        font-weight: 600;   
+        margin: 0;
+        opacity: .90;
+        padding: 0;
+        text-align: center;
+      }
+    }
+  }
+}

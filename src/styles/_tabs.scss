@@ -1,0 +1,102 @@
+.metro {
+  &-transit {
+    &--heading {
+      color: var(--metro-black);
+      margin: 0;
+      padding: 25px 0;
+      font-size: 21px;
+
+      @media (min-width: 768px) {
+        font-size: 32px;
+        padding: 50px 0;
+      }
+    }
+    
+    &--route {
+      &_tabs {      
+        display: flex;
+        margin: 0 auto;
+        padding: 0 0 30px 0;
+        width: 65vw;
+  
+        @media (min-width: 768px) {
+          width: 50vw;
+        }
+        
+        @media (min-width: 1024px) {
+          width: 40vw;
+        }
+        
+        @media (min-width: 1440px) {
+          width: 25vw;
+        }
+      }
+  
+      &_tabType {
+        border: 0;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 15px 20px;
+        position: relative;
+        width: 50%;
+  
+        @media (min-width: 768px) {
+          font-size: 24px;
+          padding: 20px 20px;
+        }
+  
+        &:after {
+          content: '';
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          bottom: -10px;
+          height: 0;
+          left: 50%;
+          position: absolute;
+          transform: translateX(-50%);
+          width: 0; 
+        }
+  
+        &:nth-child(1) {
+          background: var(--metro-light-blue);
+          color: var(--metro-blue);
+
+          &:after {
+            content: '';
+            border-top: 20px solid var(--metro-light-blue);
+          }
+
+          &[data-active="true"] {
+            background: var(--metro-blue);
+            color: var(--metro-white);
+
+            &:after {
+              content: '';
+              border-top: 20px solid var(--metro-blue);
+            }
+          }
+        }
+        
+        &:nth-child(2) {
+          background: var(--metro-light-blue);
+          color: var(--metro-blue);
+  
+          &:after {
+            content: '';
+            border-top: 20px solid var(--metro-light-blue);;
+          }
+
+          &[data-active="true"] {
+            background: var(--metro-blue);
+            color: var(--metro-white);
+
+            &:after {
+              content: '';
+              border-top: 20px solid var(--metro-blue);;
+            }
+          }
+        }
+      }
+    }
+  }
+}
