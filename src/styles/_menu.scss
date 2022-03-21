@@ -105,6 +105,12 @@
         margin: 0;
         padding: 25px 25px;
         text-decoration: none;
+        transition: all .25s ease-out;
+
+        &:hover {
+          background: var(--metro-blue);
+          color: var(--metro-white);
+        }
       }
     }
   }
