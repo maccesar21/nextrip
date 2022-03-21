@@ -2,14 +2,16 @@
   &-transit {
     &--logo {
       padding: 15px 20px;
-      width: 70vw;
+      width: 75vw;
 
       @media (min-width: 768px) {
         padding: 20px 25px;
+        width: 85vw;
       }
       
-      @media (min-width: 1440px) {
+      @media (min-width: 1024px) {
         padding: 15px 25px;
+        width: 280px;
       }
 
       &_img {

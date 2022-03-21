@@ -8,21 +8,24 @@
       width: 100vw;
 
       &_title {
-        background: rgba(255, 255, 255, .70);
-        bottom: 25px;
-        text-align: center;
-        left: 25px;
-        padding: 20px 25px;
-        position: absolute;
+        margin: 0 auto;
+        max-width: 1440px;
+        position: relative;
+        height: 100%;
+        width: 100%;
       }
 
       &_titleText {
+        background: rgba(255, 255, 255, .70);
+        bottom: 25px;
         color: #8a8b8a;
         font-size: 42px;
         font-weight: 600;   
+        left: 25px;
         margin: 0;
         opacity: .90;
-        padding: 0;
+        position: absolute;
+        padding: 20px 25px;
         text-align: center;
       }
     }
