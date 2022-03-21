@@ -58,7 +58,7 @@
         flex-direction: column;
         height: 0;
         list-style: none;
-        left: 0;
+        right: 0;
         margin: 0;
         overflow: hidden;
         padding: 0;
@@ -67,6 +67,10 @@
         transition: all .25s ease-out;
         width: 100vw;
         z-index: 10;
+
+        @media (min-width: 768px) {
+          width: 50vw;
+        }
 
         @media (min-width: 1024px) {
           align-items: center;
@@ -84,6 +88,11 @@
 
         &[data-active='true'] {
           height: 100vh;
+
+          @media (min-width: 1024px) {
+            height: auto;
+          }
+
         }
       }
       
