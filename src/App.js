@@ -23,8 +23,12 @@ function App() {
   
   useEffect(() => {
     (async () => {
-      const {data} = await axios.get('https://svc.metrotransit.org/nextripv2/routes?format=json');
-      setMetroRoutes(data);
+      try {
+        const {data} = await axios.get('https://svc.metrotransit.org/nextripv2/routes?format=json');
+        setMetroRoutes(data); 
+      } catch (error) {
+        console.log(error);
+      }
     })();
   }, [selectedMetroRoute]);
 
